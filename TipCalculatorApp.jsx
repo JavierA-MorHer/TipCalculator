@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useForm } from "./src/hooks/useForm";
-
 
 export const TipCalculatorApp = () => {
 
@@ -88,7 +86,7 @@ export const TipCalculatorApp = () => {
             />
             <img
               className="icon"
-              src="./src/img/icon-dollar.svg"
+              src="src/img/icon-dollar.svg"
               alt="icon dollar"
             />
           </div>
@@ -131,7 +129,7 @@ export const TipCalculatorApp = () => {
             />
             <img
               className="icon"
-              src="./src/img/icon-person.svg"
+              src="src/img/icon-person.svg"
               alt="icon person"
             />
           </div>
