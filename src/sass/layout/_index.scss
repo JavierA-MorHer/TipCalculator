@@ -1,0 +1,23 @@
+@import '../abstract/variables';
+@import '../mixins/mediaquery';
+
+.container{
+    background-color: $White;
+    border-radius: 20px;
+    width: auto;
+    height: 55vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@include phone{
+    .container{
+        display: block;
+        width: 99vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        width: 98vw;
+    }
+}
+

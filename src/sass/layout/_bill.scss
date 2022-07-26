@@ -1,0 +1,118 @@
+@import '../abstract/variables';
+@import '../mixins/mediaquery';
+
+
+//bill
+.bill-container{
+    color: $Dark-grayish-cyan;
+    margin: 25px;
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.title-error{
+    display: none;
+}
+
+.input-bill{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    text-align: right;
+    background-color: $Very-light-grayish-cyan;
+    border-style: none;
+}
+
+input:focus{
+    outline: solid 2px $Strong-cyan;
+    
+}
+
+.error{
+    .input-bill{
+       border-style: solid;
+       border-color: $error;
+    }
+
+    .title-error{
+        display: block;
+        color: $error;
+    }
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input{
+    position: relative;  
+
+    .icon{
+        position: absolute;
+        top: 15px;
+        left: 11px;
+    }
+}
+
+//Remove increment arrows in browser
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 2px; 
+}
+
+.button-tip{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+
+    .btn{
+        width: 100px;
+        height: 40px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border-style: none;
+        background-color: $Very-dark-cyan;
+        color: $White;
+        cursor: pointer;
+        font-size: $Font-size; 
+        transition: .1s ease-in-out;
+        
+        &:hover{
+            background-color: $Strong-cyan;
+        }
+    }
+
+    .selected{
+        background-color: $Strong-cyan;
+    }
+
+    .btn-custom{
+        width: 100px;
+        height: 40px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border-style: none;
+        background-color: $Very-light-grayish-cyan;
+        cursor: pointer;
+        text-align: right;
+        color: $Very-dark-cyan;
+        font-size: $Font-size;
+    }
+
+   
+}
+
+::placeholder{
+    font-size: 22px;
+}
+
+@include phone{
+    .button-tip{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
