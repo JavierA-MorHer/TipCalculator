@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import iconDolar from './src/img/icon-dollar.svg';
+import iconPerson from './src/img/icon-person.svg'
+
 export const TipCalculatorApp = () => {
 
   const [bill, setBill] = useState();
@@ -86,7 +89,7 @@ export const TipCalculatorApp = () => {
             />
             <img
               className="icon"
-              src="src/img/icon-dollar.svg"
+              src={iconDolar}
               alt="icon dollar"
             />
           </div>
@@ -129,7 +132,7 @@ export const TipCalculatorApp = () => {
             />
             <img
               className="icon"
-              src="src/img/icon-person.svg"
+              src={iconPerson}
               alt="icon person"
             />
           </div>
